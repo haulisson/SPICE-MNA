@@ -4,6 +4,7 @@ project:
 
 website:
   title: "MNA para Simuladores SPICE"
+  site-url: "https://haulisson.github.io/SPICE-MNA/"
   navbar:
     left:
       - href: index.qmd

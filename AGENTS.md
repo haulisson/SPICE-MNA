@@ -71,3 +71,15 @@ Baseado em:
 Todo conteúdo deve incluir:
 
 CC BY-NC-SA 4.0
+
+---
+
+## Git Rules
+
+- Usar somente remoto Git via SSH.
+- Não usar remoto HTTPS para este projeto.
+- Antes de enviar alterações, verificar se o `ssh-agent` está ativo e se a chave correta está carregada.
+- Não usar email pessoal em commits deste repositório.
+- Usar o email GitHub noreply configurado para o projeto: `3450955+haulisson@users.noreply.github.com`.
+- Preservar o fluxo simples do repositório: `git add .`, `git commit -m "mensagem"`, `git push`.
+- Não alterar a configuração atual de autenticação Git sem necessidade explícita.

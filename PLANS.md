@@ -23,10 +23,12 @@ Criar um sistema de documentação em Quarto que permita:
 - `_quarto.yml`
 - estrutura inicial
 - página `index.qmd`
+- validação da configuração Git antes de operações maiores
 
 ### Critério de Aceitação
 
 - `quarto render` gera site navegável
+- configuração Git validada antes de operações maiores de publicação ou sincronização
 
 ### Riscos
 
@@ -35,6 +37,10 @@ Criar um sistema de documentação em Quarto que permita:
 ### Dependências
 
 - Quarto instalado
+
+### Checkpoint
+
+- [ ] Validate Git configuration before major operations
 
 ---
 
