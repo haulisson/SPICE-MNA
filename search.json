@@ -1,0 +1,303 @@
+[
+  {
+    "objectID": "mna/examples.html",
+    "href": "mna/examples.html",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Conteúdo a ser desenvolvido no Milestone 4.\n\n\n\nEspaço reservado para a modelagem dos circuitos escolhidos.\n\n\n\nEspaço reservado para a solução manual via MNA.\n\n\n\nEspaço reservado para relacionar os exemplos com netlists e simuladores.\n\n\n\nEspaço reservado para circuitos completos.\n\n\n\nEspaço reservado para observações conceituais, sem código."
+  },
+  {
+    "objectID": "mna/examples.html#intuição",
+    "href": "mna/examples.html#intuição",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Conteúdo a ser desenvolvido no Milestone 4."
+  },
+  {
+    "objectID": "mna/examples.html#formulação-matemática",
+    "href": "mna/examples.html#formulação-matemática",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Espaço reservado para a modelagem dos circuitos escolhidos."
+  },
+  {
+    "objectID": "mna/examples.html#derivação",
+    "href": "mna/examples.html#derivação",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Espaço reservado para a solução manual via MNA."
+  },
+  {
+    "objectID": "mna/examples.html#aplicação-em-spice",
+    "href": "mna/examples.html#aplicação-em-spice",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Espaço reservado para relacionar os exemplos com netlists e simuladores."
+  },
+  {
+    "objectID": "mna/examples.html#exemplo-resolvido",
+    "href": "mna/examples.html#exemplo-resolvido",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Espaço reservado para circuitos completos."
+  },
+  {
+    "objectID": "mna/examples.html#possível-implementação",
+    "href": "mna/examples.html#possível-implementação",
+    "title": "Exemplos Resolvidos",
+    "section": "",
+    "text": "Espaço reservado para observações conceituais, sem código."
+  },
+  {
+    "objectID": "mna/stamping.html",
+    "href": "mna/stamping.html",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Conteúdo a ser desenvolvido no Milestone 3.\n\n\n\nEspaço reservado para as regras de montagem de resistor, fonte de corrente e fonte de tensão.\n\n\n\nEspaço reservado para justificar cada stamp.\n\n\n\nEspaço reservado para o fluxo de montagem da matriz global.\n\n\n\nEspaço reservado para um stamping passo a passo.\n\n\n\nEspaço reservado para observações conceituais, sem código."
+  },
+  {
+    "objectID": "mna/stamping.html#intuição",
+    "href": "mna/stamping.html#intuição",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Conteúdo a ser desenvolvido no Milestone 3."
+  },
+  {
+    "objectID": "mna/stamping.html#formulação-matemática",
+    "href": "mna/stamping.html#formulação-matemática",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Espaço reservado para as regras de montagem de resistor, fonte de corrente e fonte de tensão."
+  },
+  {
+    "objectID": "mna/stamping.html#derivação",
+    "href": "mna/stamping.html#derivação",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Espaço reservado para justificar cada stamp."
+  },
+  {
+    "objectID": "mna/stamping.html#aplicação-em-spice",
+    "href": "mna/stamping.html#aplicação-em-spice",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Espaço reservado para o fluxo de montagem da matriz global."
+  },
+  {
+    "objectID": "mna/stamping.html#exemplo-resolvido",
+    "href": "mna/stamping.html#exemplo-resolvido",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Espaço reservado para um stamping passo a passo."
+  },
+  {
+    "objectID": "mna/stamping.html#possível-implementação",
+    "href": "mna/stamping.html#possível-implementação",
+    "title": "Stamping de Elementos",
+    "section": "",
+    "text": "Espaço reservado para observações conceituais, sem código."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MNA para Simuladores SPICE",
+    "section": "",
+    "text": "Este repositório organiza uma apostila em Quarto para estudar Modified Nodal Analysis (MNA) com foco em simuladores do tipo SPICE.\nO material foi estruturado para ser:\n\nincremental\ntecnicamente rigoroso\npublicável como documentação aberta\nútil como base conceitual para uma futura implementação\n\n\n\nO percurso de estudo cobre:\n\nfundamentos de MNA;\nregras de stamping para elementos básicos;\nexemplos resolvidos;\naspectos numéricos relevantes para simuladores.\n\n\n\n\n\n\n\n\n\nflowchart TD\n    A[\"Introdução\"] --&gt; B[\"Formulação MNA\"]\n    B --&gt; C[\"Stamping\"]\n    C --&gt; D[\"Exemplos Resolvidos\"]\n    D --&gt; E[\"Métodos Numéricos\"]\n\n\n\n\n\n\n\n\n\nAs equações serão apresentadas com MathJax. A forma matricial base será\n\\[\n\\mathbf{A}\\mathbf{x}=\\mathbf{z},\n\\]\nem que:\n\n\\(\\mathbf{A}\\) é a matriz do sistema MNA;\n\\(\\mathbf{x}\\) agrupa tensões nodais e correntes auxiliares;\n\\(\\mathbf{z}\\) representa as excitações independentes.\n\n\n\n\nEste material é distribuído sob CC BY-NC-SA 4.0."
+  },
+  {
+    "objectID": "index.html#objetivo",
+    "href": "index.html#objetivo",
+    "title": "MNA para Simuladores SPICE",
+    "section": "",
+    "text": "O percurso de estudo cobre:\n\nfundamentos de MNA;\nregras de stamping para elementos básicos;\nexemplos resolvidos;\naspectos numéricos relevantes para simuladores."
+  },
+  {
+    "objectID": "index.html#estrutura-do-material",
+    "href": "index.html#estrutura-do-material",
+    "title": "MNA para Simuladores SPICE",
+    "section": "",
+    "text": "flowchart TD\n    A[\"Introdução\"] --&gt; B[\"Formulação MNA\"]\n    B --&gt; C[\"Stamping\"]\n    C --&gt; D[\"Exemplos Resolvidos\"]\n    D --&gt; E[\"Métodos Numéricos\"]"
+  },
+  {
+    "objectID": "index.html#convenções",
+    "href": "index.html#convenções",
+    "title": "MNA para Simuladores SPICE",
+    "section": "",
+    "text": "As equações serão apresentadas com MathJax. A forma matricial base será\n\\[\n\\mathbf{A}\\mathbf{x}=\\mathbf{z},\n\\]\nem que:\n\n\\(\\mathbf{A}\\) é a matriz do sistema MNA;\n\\(\\mathbf{x}\\) agrupa tensões nodais e correntes auxiliares;\n\\(\\mathbf{z}\\) representa as excitações independentes."
+  },
+  {
+    "objectID": "index.html#licença",
+    "href": "index.html#licença",
+    "title": "MNA para Simuladores SPICE",
+    "section": "",
+    "text": "Este material é distribuído sob CC BY-NC-SA 4.0."
+  },
+  {
+    "objectID": "mna/intro.html",
+    "href": "mna/intro.html",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "A Modified Nodal Analysis (MNA) é uma forma sistemática de escrever as equações de um circuito para que ele possa ser analisado numericamente.\nA ideia central é simples:\n\nrepresentar o circuito por nós e ramos;\nusar as leis de Kirchhoff para impor a topologia;\nusar as equações constitutivas dos elementos para relacionar tensão e corrente;\nreorganizar tudo em um sistema matricial.\n\nEm vez de escrever equações diferentes para cada circuito manualmente, a MNA cria uma estrutura padronizada. Essa padronização é exatamente o que torna a abordagem adequada para simuladores do tipo SPICE.\n\n\n\nA análise nodal clássica é muito eficiente quando todos os elementos podem ser descritos por uma admitância entre nós. Nesse cenário, obtém-se um sistema compacto apenas com tensões nodais.\nO problema aparece quando o circuito contém elementos como:\n\nfontes ideais de tensão;\nfontes controladas;\ncertos elementos dependentes da corrente de ramo;\ncomponentes para os quais a representação puramente em admitância não é conveniente.\n\nNesses casos, a análise nodal pura deixa de ser geral o bastante. A MNA surge exatamente para remover essa limitação sem abandonar as vantagens da formulação nodal.\n\n\n\nUma forma útil de enxergar a MNA é como um meio-termo entre duas abordagens:\n\ntableau analysis, que é bastante geral, mas introduz muitas variáveis;\nnodal analysis, que é compacta, mas restrita.\n\nOs materiais de referência usados aqui destacam esse ponto:\n\na formulação tableau é mais abrangente, porém maior e mais custosa;\na formulação nodal é menor, porém não trata bem fontes de tensão ideais;\na MNA preserva a estrutura nodal e adiciona apenas as variáveis extras estritamente necessárias.\n\nPor isso, ela combina:\n\nboa generalidade;\nmontagem simples;\nmatrizes menores que as da formulação tableau;\ncomportamento numérico favorável.\n\n\n\n\nConsidere um circuito formado por elementos de dois terminais, como:\n\nresistores;\ncapacitores;\nindutores;\nfontes independentes de corrente;\nfontes independentes de tensão.\n\nPara descrever completamente o estado do circuito, precisamos de:\n\ntensões de ramo;\ncorrentes de ramo;\npotenciais nodais.\n\nComo o potencial elétrico é sempre relativo, escolhe-se um nó de referência, chamado terra ou ground, cujo potencial é definido como 0 V. Todas as demais tensões nodais passam então a ser medidas em relação a esse nó.\n\n\n\nO ponto de partida são as leis de Kirchhoff.\n\n\nEm qualquer nó, a soma algébrica das correntes deve ser nula:\n\\[\n\\sum_k i_k = 0.\n\\]\nEssa lei expressa conservação de carga.\n\n\n\nEm qualquer malha, a soma algébrica das tensões deve ser nula:\n\\[\n\\sum_k v_k = 0.\n\\]\nEssa lei expressa conservação de energia no modelo de circuito ideal.\n\n\n\nPara os elementos lineares mais comuns:\nResistor:\n\\[\nv = Ri\n\\qquad \\text{ou} \\qquad\ni = Gv,\\ \\ G = \\frac{1}{R}.\n\\]\nCapacitor:\n\\[\nq = Cv\n\\qquad \\Rightarrow \\qquad\ni = C\\frac{dv}{dt}.\n\\]\nIndutor:\n\\[\n\\phi = Li\n\\qquad \\Rightarrow \\qquad\nv = L\\frac{di}{dt}.\n\\]\nFonte de corrente independente:\n\\[\ni = I.\n\\]\nFonte de tensão independente:\n\\[\nv = E.\n\\]\n\n\n\n\nUma forma elegante de descrever a conexão entre ramos e nós é a matriz de incidência reduzida, indicada por \\(\\mathbf{A}\\).\nSe o circuito possui \\(n+1\\) nós no total, sendo um deles o terra, e \\(b\\) ramos, então:\n\nas linhas de \\(\\mathbf{A}\\) representam os nós não de referência;\nas colunas representam os ramos.\n\nCada entrada da matriz indica como um ramo se conecta a um nó:\n\\[\na_{kl} =\n\\begin{cases}\n1, & \\text{se o ramo } l \\text{ sai do nó } k \\\\\n-1, & \\text{se o ramo } l \\text{ entra no nó } k \\\\\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\nSe \\(\\mathbf{i}\\) é o vetor das correntes de ramo, então a KCL pode ser escrita de forma compacta como:\n\\[\n\\mathbf{A}\\mathbf{i} = 0.\n\\]\nSe \\(\\mathbf{e}\\) é o vetor dos potenciais nodais e \\(\\mathbf{v}\\) o vetor das tensões de ramo, então:\n\\[\n\\mathbf{v} = \\mathbf{A}^{T}\\mathbf{e}.\n\\]\nEssas duas expressões já concentram a topologia inteira do circuito.\n\n\n\nUma formulação geral do circuito pode começar com todas as variáveis de ramo e de nó ao mesmo tempo. Isso leva a um sistema grande, mas bastante direto.\nA MNA reduz esse sistema ao eliminar variáveis que podem ser substituídas por relações conhecidas.\nPor exemplo:\n\nem resistores, a corrente pode ser escrita em função da tensão;\nem fontes de corrente independentes, a corrente já é conhecida;\ntensões de ramo podem ser escritas a partir das tensões nodais.\n\nCom isso, a formulação passa a trabalhar principalmente com:\n\ntensões nodais;\ncorrentes em fontes de tensão;\ncorrentes em indutores.\n\nEssa é a modificação principal em relação à análise nodal pura: a MNA introduz variáveis auxiliares para lidar corretamente com elementos que não podem ser eliminados apenas com equações nodais, especialmente fontes de tensão.\n\n\n\nPara circuitos lineares com resistores, capacitores, indutores, fontes de corrente e fontes de tensão, a formulação pode ser organizada como:\n\\[\n\\mathbf{M}\\frac{d\\mathbf{x}}{dt} + \\mathbf{K}\\mathbf{x} = \\mathbf{f},\n\\]\nem que:\n\n\\(\\mathbf{x}\\) agrupa as incógnitas da MNA;\n\\(\\mathbf{M}\\) concentra os termos dinâmicos;\n\\(\\mathbf{K}\\) concentra os termos algébricos;\n\\(\\mathbf{f}\\) reúne as excitações independentes.\n\nUma escolha típica para o vetor de incógnitas é:\n\\[\n\\mathbf{x} =\n\\begin{bmatrix}\n\\mathbf{e} \\\\\n\\mathbf{i}_L \\\\\n\\mathbf{i}_V\n\\end{bmatrix},\n\\]\nonde:\n\n\\(\\mathbf{e}\\) são as tensões nodais;\n\\(\\mathbf{i}_L\\) são as correntes nos indutores;\n\\(\\mathbf{i}_V\\) são as correntes nas fontes de tensão.\n\nEssa forma já mostra por que a MNA é tão útil: ela transforma o circuito em um problema matricial padronizado, adequado para montagem automática.\n\n\n\nA MNA é a formulação mais associada a simuladores do tipo SPICE. Uma referência clássica é o artigo de Ho, Ruehli e Brennan (1975), que consolidou a abordagem modificada como alternativa prática à análise nodal tradicional.\nO ganho prático é claro:\n\na dimensão da matriz permanece relativamente pequena;\no número de não nulos tende a ser menor do que em formulações mais gerais;\na estratégia de montagem por elemento se torna natural;\no sistema resultante é adequado para pivotamento e solução numérica eficiente.\n\nEm termos de implementação, isso significa que a MNA não é apenas uma formulação teórica elegante: ela é também uma escolha de engenharia para reduzir custo computacional.\n\n\n\nO texto-base em upstream/MNA.pdf distingue três contextos importantes de uso da MNA.\n\n\nNa análise DC assumimos regime permanente em corrente contínua.\nNesse contexto:\n\ncapacitores se comportam como circuito aberto;\nindutores se comportam como curto-circuito;\no sistema se reduz a um problema algébrico linear.\n\nUma forma típica é:\n\\[\n\\begin{bmatrix}\n\\mathbf{A}_R \\mathbf{G} \\mathbf{A}_R^T & \\mathbf{A}_V \\\\\n\\mathbf{A}_V^T & 0\n\\end{bmatrix}\n\\begin{bmatrix}\n\\mathbf{e} \\\\\n\\mathbf{i}_V\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n-\\mathbf{A}_I \\mathbf{I} \\\\\n\\mathbf{E}\n\\end{bmatrix}.\n\\]\nEssa é a forma mais importante para entender o ponto de operação de circuitos resistivos com fontes independentes.\n\n\n\nNa análise AC considera-se um regime senoidal em frequência fixa.\nNesse caso, capacitores e indutores podem ser tratados por suas impedâncias:\n\\[\nZ_R = R,\n\\qquad\nZ_C = \\frac{1}{j\\omega C},\n\\qquad\nZ_L = j\\omega L.\n\\]\nEm vez de resolver equações diferenciais diretamente no tempo, resolve-se um sistema algébrico complexo no domínio da frequência. Isso é muito útil para estudar resposta em frequência, filtros e ganho.\n\n\n\nNa análise transitória, o objetivo é acompanhar a evolução temporal das tensões e correntes quando as fontes variam no tempo.\nAqui, a formulação diferencial-algébrica completa precisa ser preservada:\n\\[\n\\mathbf{M}\\frac{d\\mathbf{x}}{dt} + \\mathbf{K}\\mathbf{x} = \\mathbf{f}(t).\n\\]\nAlém disso, são necessárias condições iniciais consistentes, por exemplo:\n\\[\n\\mathbf{e}(0) = \\mathbf{e}_0,\n\\qquad\n\\mathbf{i}_L(0) = \\mathbf{i}_{L,0}.\n\\]\nEsse é o regime mais geral e o mais próximo do comportamento real de um simulador SPICE.\n\n\n\n\nOs materiais complementares também deixam claro que a ideia da MNA pode ser estendida para circuitos não lineares.\nNesse caso, as relações constitutivas deixam de ser lineares e o sistema passa a depender do próprio vetor de incógnitas. Conceitualmente, a estrutura continua a mesma:\n\nmontar as equações a partir da topologia;\nincluir as relações de cada elemento;\nlinearizar iterativamente quando necessário.\n\nEsse ponto é importante porque simuladores SPICE reais trabalham justamente com elementos não lineares, como diodos e transistores.\n\n\n\nEm um simulador SPICE, o circuito não é resolvido como um desenho, mas como um conjunto de equações montadas a partir dos elementos.\nO fluxo conceitual é:\n\nler a descrição do circuito;\nidentificar nós e componentes;\nadicionar a contribuição de cada elemento à matriz global;\nresolver o sistema resultante.\n\nEssa contribuição local de cada elemento para a matriz global é o que normalmente se chama de stamping.\nPor isso, entender MNA primeiro é essencial: o stamping nada mais é do que a implementação sistemática da formulação matricial.\nOutro ponto prático importante é que a MNA permite construir a matriz elemento por elemento, usando regras locais. Isso combina bem com a leitura de uma netlist e com a arquitetura tradicional de simuladores.\n\n\n\nConsidere um circuito simples com:\n\numa fonte de corrente \\(I\\) injetando corrente em um nó;\num resistor \\(R\\) ligando esse nó ao terra.\n\nSe a tensão do nó for \\(v\\), então a corrente no resistor é:\n\\[\n\\frac{v}{R}.\n\\]\nAplicando KCL no nó:\n\\[\n\\frac{v}{R} - I = 0.\n\\]\nLogo,\n\\[\nv = RI.\n\\]\nMesmo esse caso simples já ilustra a lógica da MNA:\n\nescolher variáveis nodais;\nescrever as contribuições dos elementos;\nmontar e resolver um sistema linear.\n\n\n\n\nUma consequência importante da MNA é que nem toda corrente aparece diretamente como incógnita principal.\nPor exemplo, a corrente em um resistor normalmente é recuperada depois, a partir das tensões nodais. Uma técnica clássica para expor explicitamente essa corrente é inserir uma fonte de tensão de 0 V em série com o ramo. Como a corrente na fonte passa a ser uma incógnita da MNA, ela funciona como um “amperímetro ideal” sem alterar o circuito idealizado.\n\n\n\nEm uma implementação futura, cada tipo de elemento poderá contribuir com blocos específicos para a matriz global e para o vetor do lado direito.\nOs próximos tópicos naturais são:\n\nstamping de resistor;\nstamping de fontes independentes;\nextensão para elementos dinâmicos;\ntratamento numérico do sistema linear.\n\n\n\n\n\nHanke, Michael. An Introduction to the Modified Nodal Analysis. August 20, 2008.\nHo, Chung-Wen, Albert E. Ruehli, and Pierce A. Brennan. “The Modified Nodal Approach to Network Analysis.” IEEE Transactions on Circuits and Systems 22, no. 6 (June 1975): 504-509.\nRayas-Sánchez, José Ernesto. The Modified Nodal Analysis (MNA) Method. February 5, 2020."
+  },
+  {
+    "objectID": "mna/intro.html#intuição",
+    "href": "mna/intro.html#intuição",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "A Modified Nodal Analysis (MNA) é uma forma sistemática de escrever as equações de um circuito para que ele possa ser analisado numericamente.\nA ideia central é simples:\n\nrepresentar o circuito por nós e ramos;\nusar as leis de Kirchhoff para impor a topologia;\nusar as equações constitutivas dos elementos para relacionar tensão e corrente;\nreorganizar tudo em um sistema matricial.\n\nEm vez de escrever equações diferentes para cada circuito manualmente, a MNA cria uma estrutura padronizada. Essa padronização é exatamente o que torna a abordagem adequada para simuladores do tipo SPICE."
+  },
+  {
+    "objectID": "mna/intro.html#por-que-não-usar-apenas-análise-nodal",
+    "href": "mna/intro.html#por-que-não-usar-apenas-análise-nodal",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "A análise nodal clássica é muito eficiente quando todos os elementos podem ser descritos por uma admitância entre nós. Nesse cenário, obtém-se um sistema compacto apenas com tensões nodais.\nO problema aparece quando o circuito contém elementos como:\n\nfontes ideais de tensão;\nfontes controladas;\ncertos elementos dependentes da corrente de ramo;\ncomponentes para os quais a representação puramente em admitância não é conveniente.\n\nNesses casos, a análise nodal pura deixa de ser geral o bastante. A MNA surge exatamente para remover essa limitação sem abandonar as vantagens da formulação nodal."
+  },
+  {
+    "objectID": "mna/intro.html#relação-com-outras-formulações",
+    "href": "mna/intro.html#relação-com-outras-formulações",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Uma forma útil de enxergar a MNA é como um meio-termo entre duas abordagens:\n\ntableau analysis, que é bastante geral, mas introduz muitas variáveis;\nnodal analysis, que é compacta, mas restrita.\n\nOs materiais de referência usados aqui destacam esse ponto:\n\na formulação tableau é mais abrangente, porém maior e mais custosa;\na formulação nodal é menor, porém não trata bem fontes de tensão ideais;\na MNA preserva a estrutura nodal e adiciona apenas as variáveis extras estritamente necessárias.\n\nPor isso, ela combina:\n\nboa generalidade;\nmontagem simples;\nmatrizes menores que as da formulação tableau;\ncomportamento numérico favorável."
+  },
+  {
+    "objectID": "mna/intro.html#elementos-e-variáveis-do-circuito",
+    "href": "mna/intro.html#elementos-e-variáveis-do-circuito",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Considere um circuito formado por elementos de dois terminais, como:\n\nresistores;\ncapacitores;\nindutores;\nfontes independentes de corrente;\nfontes independentes de tensão.\n\nPara descrever completamente o estado do circuito, precisamos de:\n\ntensões de ramo;\ncorrentes de ramo;\npotenciais nodais.\n\nComo o potencial elétrico é sempre relativo, escolhe-se um nó de referência, chamado terra ou ground, cujo potencial é definido como 0 V. Todas as demais tensões nodais passam então a ser medidas em relação a esse nó."
+  },
+  {
+    "objectID": "mna/intro.html#formulação-matemática",
+    "href": "mna/intro.html#formulação-matemática",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "O ponto de partida são as leis de Kirchhoff.\n\n\nEm qualquer nó, a soma algébrica das correntes deve ser nula:\n\\[\n\\sum_k i_k = 0.\n\\]\nEssa lei expressa conservação de carga.\n\n\n\nEm qualquer malha, a soma algébrica das tensões deve ser nula:\n\\[\n\\sum_k v_k = 0.\n\\]\nEssa lei expressa conservação de energia no modelo de circuito ideal.\n\n\n\nPara os elementos lineares mais comuns:\nResistor:\n\\[\nv = Ri\n\\qquad \\text{ou} \\qquad\ni = Gv,\\ \\ G = \\frac{1}{R}.\n\\]\nCapacitor:\n\\[\nq = Cv\n\\qquad \\Rightarrow \\qquad\ni = C\\frac{dv}{dt}.\n\\]\nIndutor:\n\\[\n\\phi = Li\n\\qquad \\Rightarrow \\qquad\nv = L\\frac{di}{dt}.\n\\]\nFonte de corrente independente:\n\\[\ni = I.\n\\]\nFonte de tensão independente:\n\\[\nv = E.\n\\]"
+  },
+  {
+    "objectID": "mna/intro.html#incidência-e-topologia",
+    "href": "mna/intro.html#incidência-e-topologia",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Uma forma elegante de descrever a conexão entre ramos e nós é a matriz de incidência reduzida, indicada por \\(\\mathbf{A}\\).\nSe o circuito possui \\(n+1\\) nós no total, sendo um deles o terra, e \\(b\\) ramos, então:\n\nas linhas de \\(\\mathbf{A}\\) representam os nós não de referência;\nas colunas representam os ramos.\n\nCada entrada da matriz indica como um ramo se conecta a um nó:\n\\[\na_{kl} =\n\\begin{cases}\n1, & \\text{se o ramo } l \\text{ sai do nó } k \\\\\n-1, & \\text{se o ramo } l \\text{ entra no nó } k \\\\\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\nSe \\(\\mathbf{i}\\) é o vetor das correntes de ramo, então a KCL pode ser escrita de forma compacta como:\n\\[\n\\mathbf{A}\\mathbf{i} = 0.\n\\]\nSe \\(\\mathbf{e}\\) é o vetor dos potenciais nodais e \\(\\mathbf{v}\\) o vetor das tensões de ramo, então:\n\\[\n\\mathbf{v} = \\mathbf{A}^{T}\\mathbf{e}.\n\\]\nEssas duas expressões já concentram a topologia inteira do circuito."
+  },
+  {
+    "objectID": "mna/intro.html#derivação",
+    "href": "mna/intro.html#derivação",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Uma formulação geral do circuito pode começar com todas as variáveis de ramo e de nó ao mesmo tempo. Isso leva a um sistema grande, mas bastante direto.\nA MNA reduz esse sistema ao eliminar variáveis que podem ser substituídas por relações conhecidas.\nPor exemplo:\n\nem resistores, a corrente pode ser escrita em função da tensão;\nem fontes de corrente independentes, a corrente já é conhecida;\ntensões de ramo podem ser escritas a partir das tensões nodais.\n\nCom isso, a formulação passa a trabalhar principalmente com:\n\ntensões nodais;\ncorrentes em fontes de tensão;\ncorrentes em indutores.\n\nEssa é a modificação principal em relação à análise nodal pura: a MNA introduz variáveis auxiliares para lidar corretamente com elementos que não podem ser eliminados apenas com equações nodais, especialmente fontes de tensão."
+  },
+  {
+    "objectID": "mna/intro.html#forma-matricial-geral",
+    "href": "mna/intro.html#forma-matricial-geral",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Para circuitos lineares com resistores, capacitores, indutores, fontes de corrente e fontes de tensão, a formulação pode ser organizada como:\n\\[\n\\mathbf{M}\\frac{d\\mathbf{x}}{dt} + \\mathbf{K}\\mathbf{x} = \\mathbf{f},\n\\]\nem que:\n\n\\(\\mathbf{x}\\) agrupa as incógnitas da MNA;\n\\(\\mathbf{M}\\) concentra os termos dinâmicos;\n\\(\\mathbf{K}\\) concentra os termos algébricos;\n\\(\\mathbf{f}\\) reúne as excitações independentes.\n\nUma escolha típica para o vetor de incógnitas é:\n\\[\n\\mathbf{x} =\n\\begin{bmatrix}\n\\mathbf{e} \\\\\n\\mathbf{i}_L \\\\\n\\mathbf{i}_V\n\\end{bmatrix},\n\\]\nonde:\n\n\\(\\mathbf{e}\\) são as tensões nodais;\n\\(\\mathbf{i}_L\\) são as correntes nos indutores;\n\\(\\mathbf{i}_V\\) são as correntes nas fontes de tensão.\n\nEssa forma já mostra por que a MNA é tão útil: ela transforma o circuito em um problema matricial padronizado, adequado para montagem automática."
+  },
+  {
+    "objectID": "mna/intro.html#origem-e-relevância-prática",
+    "href": "mna/intro.html#origem-e-relevância-prática",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "A MNA é a formulação mais associada a simuladores do tipo SPICE. Uma referência clássica é o artigo de Ho, Ruehli e Brennan (1975), que consolidou a abordagem modificada como alternativa prática à análise nodal tradicional.\nO ganho prático é claro:\n\na dimensão da matriz permanece relativamente pequena;\no número de não nulos tende a ser menor do que em formulações mais gerais;\na estratégia de montagem por elemento se torna natural;\no sistema resultante é adequado para pivotamento e solução numérica eficiente.\n\nEm termos de implementação, isso significa que a MNA não é apenas uma formulação teórica elegante: ela é também uma escolha de engenharia para reduzir custo computacional."
+  },
+  {
+    "objectID": "mna/intro.html#regimes-de-análise",
+    "href": "mna/intro.html#regimes-de-análise",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "O texto-base em upstream/MNA.pdf distingue três contextos importantes de uso da MNA.\n\n\nNa análise DC assumimos regime permanente em corrente contínua.\nNesse contexto:\n\ncapacitores se comportam como circuito aberto;\nindutores se comportam como curto-circuito;\no sistema se reduz a um problema algébrico linear.\n\nUma forma típica é:\n\\[\n\\begin{bmatrix}\n\\mathbf{A}_R \\mathbf{G} \\mathbf{A}_R^T & \\mathbf{A}_V \\\\\n\\mathbf{A}_V^T & 0\n\\end{bmatrix}\n\\begin{bmatrix}\n\\mathbf{e} \\\\\n\\mathbf{i}_V\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n-\\mathbf{A}_I \\mathbf{I} \\\\\n\\mathbf{E}\n\\end{bmatrix}.\n\\]\nEssa é a forma mais importante para entender o ponto de operação de circuitos resistivos com fontes independentes.\n\n\n\nNa análise AC considera-se um regime senoidal em frequência fixa.\nNesse caso, capacitores e indutores podem ser tratados por suas impedâncias:\n\\[\nZ_R = R,\n\\qquad\nZ_C = \\frac{1}{j\\omega C},\n\\qquad\nZ_L = j\\omega L.\n\\]\nEm vez de resolver equações diferenciais diretamente no tempo, resolve-se um sistema algébrico complexo no domínio da frequência. Isso é muito útil para estudar resposta em frequência, filtros e ganho.\n\n\n\nNa análise transitória, o objetivo é acompanhar a evolução temporal das tensões e correntes quando as fontes variam no tempo.\nAqui, a formulação diferencial-algébrica completa precisa ser preservada:\n\\[\n\\mathbf{M}\\frac{d\\mathbf{x}}{dt} + \\mathbf{K}\\mathbf{x} = \\mathbf{f}(t).\n\\]\nAlém disso, são necessárias condições iniciais consistentes, por exemplo:\n\\[\n\\mathbf{e}(0) = \\mathbf{e}_0,\n\\qquad\n\\mathbf{i}_L(0) = \\mathbf{i}_{L,0}.\n\\]\nEsse é o regime mais geral e o mais próximo do comportamento real de um simulador SPICE."
+  },
+  {
+    "objectID": "mna/intro.html#circuitos-não-lineares",
+    "href": "mna/intro.html#circuitos-não-lineares",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Os materiais complementares também deixam claro que a ideia da MNA pode ser estendida para circuitos não lineares.\nNesse caso, as relações constitutivas deixam de ser lineares e o sistema passa a depender do próprio vetor de incógnitas. Conceitualmente, a estrutura continua a mesma:\n\nmontar as equações a partir da topologia;\nincluir as relações de cada elemento;\nlinearizar iterativamente quando necessário.\n\nEsse ponto é importante porque simuladores SPICE reais trabalham justamente com elementos não lineares, como diodos e transistores."
+  },
+  {
+    "objectID": "mna/intro.html#aplicação-em-spice",
+    "href": "mna/intro.html#aplicação-em-spice",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Em um simulador SPICE, o circuito não é resolvido como um desenho, mas como um conjunto de equações montadas a partir dos elementos.\nO fluxo conceitual é:\n\nler a descrição do circuito;\nidentificar nós e componentes;\nadicionar a contribuição de cada elemento à matriz global;\nresolver o sistema resultante.\n\nEssa contribuição local de cada elemento para a matriz global é o que normalmente se chama de stamping.\nPor isso, entender MNA primeiro é essencial: o stamping nada mais é do que a implementação sistemática da formulação matricial.\nOutro ponto prático importante é que a MNA permite construir a matriz elemento por elemento, usando regras locais. Isso combina bem com a leitura de uma netlist e com a arquitetura tradicional de simuladores."
+  },
+  {
+    "objectID": "mna/intro.html#exemplo-resolvido",
+    "href": "mna/intro.html#exemplo-resolvido",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Considere um circuito simples com:\n\numa fonte de corrente \\(I\\) injetando corrente em um nó;\num resistor \\(R\\) ligando esse nó ao terra.\n\nSe a tensão do nó for \\(v\\), então a corrente no resistor é:\n\\[\n\\frac{v}{R}.\n\\]\nAplicando KCL no nó:\n\\[\n\\frac{v}{R} - I = 0.\n\\]\nLogo,\n\\[\nv = RI.\n\\]\nMesmo esse caso simples já ilustra a lógica da MNA:\n\nescolher variáveis nodais;\nescrever as contribuições dos elementos;\nmontar e resolver um sistema linear."
+  },
+  {
+    "objectID": "mna/intro.html#observação-prática",
+    "href": "mna/intro.html#observação-prática",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Uma consequência importante da MNA é que nem toda corrente aparece diretamente como incógnita principal.\nPor exemplo, a corrente em um resistor normalmente é recuperada depois, a partir das tensões nodais. Uma técnica clássica para expor explicitamente essa corrente é inserir uma fonte de tensão de 0 V em série com o ramo. Como a corrente na fonte passa a ser uma incógnita da MNA, ela funciona como um “amperímetro ideal” sem alterar o circuito idealizado."
+  },
+  {
+    "objectID": "mna/intro.html#possível-implementação",
+    "href": "mna/intro.html#possível-implementação",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Em uma implementação futura, cada tipo de elemento poderá contribuir com blocos específicos para a matriz global e para o vetor do lado direito.\nOs próximos tópicos naturais são:\n\nstamping de resistor;\nstamping de fontes independentes;\nextensão para elementos dinâmicos;\ntratamento numérico do sistema linear."
+  },
+  {
+    "objectID": "mna/intro.html#referências",
+    "href": "mna/intro.html#referências",
+    "title": "Fundamentos de MNA",
+    "section": "",
+    "text": "Hanke, Michael. An Introduction to the Modified Nodal Analysis. August 20, 2008.\nHo, Chung-Wen, Albert E. Ruehli, and Pierce A. Brennan. “The Modified Nodal Approach to Network Analysis.” IEEE Transactions on Circuits and Systems 22, no. 6 (June 1975): 504-509.\nRayas-Sánchez, José Ernesto. The Modified Nodal Analysis (MNA) Method. February 5, 2020."
+  },
+  {
+    "objectID": "mna/numerical.html",
+    "href": "mna/numerical.html",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Conteúdo a ser desenvolvido no Milestone 5.\n\n\n\nEspaço reservado para fatoração LU, pivotamento e estabilidade numérica.\n\n\n\nEspaço reservado para a ligação entre a matriz MNA e sua solução numérica.\n\n\n\nEspaço reservado para decisões típicas de simuladores.\n\n\n\nEspaço reservado para um pequeno sistema linear ilustrativo.\n\n\n\nEspaço reservado para observações conceituais, sem código."
+  },
+  {
+    "objectID": "mna/numerical.html#intuição",
+    "href": "mna/numerical.html#intuição",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Conteúdo a ser desenvolvido no Milestone 5."
+  },
+  {
+    "objectID": "mna/numerical.html#formulação-matemática",
+    "href": "mna/numerical.html#formulação-matemática",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Espaço reservado para fatoração LU, pivotamento e estabilidade numérica."
+  },
+  {
+    "objectID": "mna/numerical.html#derivação",
+    "href": "mna/numerical.html#derivação",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Espaço reservado para a ligação entre a matriz MNA e sua solução numérica."
+  },
+  {
+    "objectID": "mna/numerical.html#aplicação-em-spice",
+    "href": "mna/numerical.html#aplicação-em-spice",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Espaço reservado para decisões típicas de simuladores."
+  },
+  {
+    "objectID": "mna/numerical.html#exemplo-resolvido",
+    "href": "mna/numerical.html#exemplo-resolvido",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Espaço reservado para um pequeno sistema linear ilustrativo."
+  },
+  {
+    "objectID": "mna/numerical.html#possível-implementação",
+    "href": "mna/numerical.html#possível-implementação",
+    "title": "Aspectos Numéricos",
+    "section": "",
+    "text": "Espaço reservado para observações conceituais, sem código."
+  }
+]
