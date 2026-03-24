@@ -1,0 +1,47 @@
+/* Base visual simples e legível para material técnico em Quarto. */
+
+:root {
+  --mna-accent: #0f4c5c;
+  --mna-accent-soft: #e6f1f4;
+  --mna-text: #1f2933;
+}
+
+body {
+  color: var(--mna-text);
+}
+
+.navbar {
+  border-bottom: 2px solid var(--mna-accent-soft);
+}
+
+.navbar-brand,
+.nav-link,
+h1,
+h2,
+h3 {
+  color: var(--mna-accent);
+}
+
+.quarto-title-block .quarto-title-banner {
+  background: linear-gradient(135deg, #f3f7f8, #ffffff);
+}
+
+.mermaid {
+  background: #ffffff;
+  border: 1px solid #d9e5e8;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+pre.mermaid,
+.mermaid-js {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mermaid svg {
+  display: block;
+  margin: 0 auto;
+}

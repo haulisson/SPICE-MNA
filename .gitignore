@@ -1,0 +1,11 @@
+# Local reference material kept outside version control.
+upstream/*
+!upstream/README.md
+!upstream/.gitkeep
+
+# Local Python virtual environment.
+.venv/
+
+# Quarto rendered output and cache.
+quarto/_site/
+quarto/.quarto/

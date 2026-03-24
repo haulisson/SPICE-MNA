@@ -1,0 +1,387 @@
+---
+title: "Fundamentos de MNA"
+---
+
+# Fundamentos de MNA
+
+## Intuição
+
+A **Modified Nodal Analysis (MNA)** é uma forma sistemática de escrever as equações de um circuito para que ele possa ser analisado numericamente.
+
+A ideia central é simples:
+
+- representar o circuito por **nós** e **ramos**;
+- usar as **leis de Kirchhoff** para impor a topologia;
+- usar as **equações constitutivas** dos elementos para relacionar tensão e corrente;
+- reorganizar tudo em um sistema matricial.
+
+Em vez de escrever equações diferentes para cada circuito manualmente, a MNA cria uma estrutura padronizada. Essa padronização é exatamente o que torna a abordagem adequada para simuladores do tipo SPICE.
+
+## Por que não usar apenas análise nodal?
+
+A análise nodal clássica é muito eficiente quando todos os elementos podem ser descritos por uma **admitância** entre nós. Nesse cenário, obtém-se um sistema compacto apenas com tensões nodais.
+
+O problema aparece quando o circuito contém elementos como:
+
+- fontes ideais de tensão;
+- fontes controladas;
+- certos elementos dependentes da corrente de ramo;
+- componentes para os quais a representação puramente em admitância não é conveniente.
+
+Nesses casos, a análise nodal pura deixa de ser geral o bastante. A MNA surge exatamente para remover essa limitação sem abandonar as vantagens da formulação nodal.
+
+## Relação com outras formulações
+
+Uma forma útil de enxergar a MNA é como um meio-termo entre duas abordagens:
+
+- **tableau analysis**, que é bastante geral, mas introduz muitas variáveis;
+- **nodal analysis**, que é compacta, mas restrita.
+
+Os materiais de referência usados aqui destacam esse ponto:
+
+- a formulação tableau é mais abrangente, porém maior e mais custosa;
+- a formulação nodal é menor, porém não trata bem fontes de tensão ideais;
+- a MNA preserva a estrutura nodal e adiciona apenas as variáveis extras estritamente necessárias.
+
+Por isso, ela combina:
+
+- boa generalidade;
+- montagem simples;
+- matrizes menores que as da formulação tableau;
+- comportamento numérico favorável.
+
+## Elementos e variáveis do circuito
+
+Considere um circuito formado por elementos de dois terminais, como:
+
+- resistores;
+- capacitores;
+- indutores;
+- fontes independentes de corrente;
+- fontes independentes de tensão.
+
+Para descrever completamente o estado do circuito, precisamos de:
+
+- tensões de ramo;
+- correntes de ramo;
+- potenciais nodais.
+
+Como o potencial elétrico é sempre relativo, escolhe-se um nó de referência, chamado **terra** ou **ground**, cujo potencial é definido como `0 V`. Todas as demais tensões nodais passam então a ser medidas em relação a esse nó.
+
+## Formulação matemática
+
+O ponto de partida são as leis de Kirchhoff.
+
+### Lei das Correntes de Kirchhoff
+
+Em qualquer nó, a soma algébrica das correntes deve ser nula:
+
+$$
+\sum_k i_k = 0.
+$$
+
+Essa lei expressa conservação de carga.
+
+### Lei das Tensões de Kirchhoff
+
+Em qualquer malha, a soma algébrica das tensões deve ser nula:
+
+$$
+\sum_k v_k = 0.
+$$
+
+Essa lei expressa conservação de energia no modelo de circuito ideal.
+
+### Relações constitutivas básicas
+
+Para os elementos lineares mais comuns:
+
+Resistor:
+
+$$
+v = Ri
+\qquad \text{ou} \qquad
+i = Gv,\ \ G = \frac{1}{R}.
+$$
+
+Capacitor:
+
+$$
+q = Cv
+\qquad \Rightarrow \qquad
+i = C\frac{dv}{dt}.
+$$
+
+Indutor:
+
+$$
+\phi = Li
+\qquad \Rightarrow \qquad
+v = L\frac{di}{dt}.
+$$
+
+Fonte de corrente independente:
+
+$$
+i = I.
+$$
+
+Fonte de tensão independente:
+
+$$
+v = E.
+$$
+
+## Incidência e topologia
+
+Uma forma elegante de descrever a conexão entre ramos e nós é a **matriz de incidência reduzida**, indicada por $\mathbf{A}$.
+
+Se o circuito possui $n+1$ nós no total, sendo um deles o terra, e $b$ ramos, então:
+
+- as linhas de $\mathbf{A}$ representam os nós não de referência;
+- as colunas representam os ramos.
+
+Cada entrada da matriz indica como um ramo se conecta a um nó:
+
+$$
+a_{kl} =
+\begin{cases}
+1, & \text{se o ramo } l \text{ sai do nó } k \\
+-1, & \text{se o ramo } l \text{ entra no nó } k \\
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+Se $\mathbf{i}$ é o vetor das correntes de ramo, então a KCL pode ser escrita de forma compacta como:
+
+$$
+\mathbf{A}\mathbf{i} = 0.
+$$
+
+Se $\mathbf{e}$ é o vetor dos potenciais nodais e $\mathbf{v}$ o vetor das tensões de ramo, então:
+
+$$
+\mathbf{v} = \mathbf{A}^{T}\mathbf{e}.
+$$
+
+Essas duas expressões já concentram a topologia inteira do circuito.
+
+## Derivação
+
+Uma formulação geral do circuito pode começar com todas as variáveis de ramo e de nó ao mesmo tempo. Isso leva a um sistema grande, mas bastante direto.
+
+A MNA reduz esse sistema ao eliminar variáveis que podem ser substituídas por relações conhecidas.
+
+Por exemplo:
+
+- em resistores, a corrente pode ser escrita em função da tensão;
+- em fontes de corrente independentes, a corrente já é conhecida;
+- tensões de ramo podem ser escritas a partir das tensões nodais.
+
+Com isso, a formulação passa a trabalhar principalmente com:
+
+- tensões nodais;
+- correntes em fontes de tensão;
+- correntes em indutores.
+
+Essa é a modificação principal em relação à análise nodal pura: a MNA introduz variáveis auxiliares para lidar corretamente com elementos que não podem ser eliminados apenas com equações nodais, especialmente **fontes de tensão**.
+
+## Forma matricial geral
+
+Para circuitos lineares com resistores, capacitores, indutores, fontes de corrente e fontes de tensão, a formulação pode ser organizada como:
+
+$$
+\mathbf{M}\frac{d\mathbf{x}}{dt} + \mathbf{K}\mathbf{x} = \mathbf{f},
+$$
+
+em que:
+
+- $\mathbf{x}$ agrupa as incógnitas da MNA;
+- $\mathbf{M}$ concentra os termos dinâmicos;
+- $\mathbf{K}$ concentra os termos algébricos;
+- $\mathbf{f}$ reúne as excitações independentes.
+
+Uma escolha típica para o vetor de incógnitas é:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+\mathbf{e} \\
+\mathbf{i}_L \\
+\mathbf{i}_V
+\end{bmatrix},
+$$
+
+onde:
+
+- $\mathbf{e}$ são as tensões nodais;
+- $\mathbf{i}_L$ são as correntes nos indutores;
+- $\mathbf{i}_V$ são as correntes nas fontes de tensão.
+
+Essa forma já mostra por que a MNA é tão útil: ela transforma o circuito em um problema matricial padronizado, adequado para montagem automática.
+
+## Origem e relevância prática
+
+A MNA é a formulação mais associada a simuladores do tipo SPICE. Uma referência clássica é o artigo de **Ho, Ruehli e Brennan (1975)**, que consolidou a abordagem modificada como alternativa prática à análise nodal tradicional.
+
+O ganho prático é claro:
+
+- a dimensão da matriz permanece relativamente pequena;
+- o número de não nulos tende a ser menor do que em formulações mais gerais;
+- a estratégia de montagem por elemento se torna natural;
+- o sistema resultante é adequado para pivotamento e solução numérica eficiente.
+
+Em termos de implementação, isso significa que a MNA não é apenas uma formulação teórica elegante: ela é também uma escolha de engenharia para reduzir custo computacional.
+
+## Regimes de análise
+
+O texto-base em `upstream/MNA.pdf` distingue três contextos importantes de uso da MNA.
+
+### Análise DC
+
+Na análise **DC** assumimos regime permanente em corrente contínua.
+
+Nesse contexto:
+
+- capacitores se comportam como circuito aberto;
+- indutores se comportam como curto-circuito;
+- o sistema se reduz a um problema algébrico linear.
+
+Uma forma típica é:
+
+$$
+\begin{bmatrix}
+\mathbf{A}_R \mathbf{G} \mathbf{A}_R^T & \mathbf{A}_V \\
+\mathbf{A}_V^T & 0
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{e} \\
+\mathbf{i}_V
+\end{bmatrix}
+=
+\begin{bmatrix}
+-\mathbf{A}_I \mathbf{I} \\
+\mathbf{E}
+\end{bmatrix}.
+$$
+
+Essa é a forma mais importante para entender o ponto de operação de circuitos resistivos com fontes independentes.
+
+### Análise AC
+
+Na análise **AC** considera-se um regime senoidal em frequência fixa.
+
+Nesse caso, capacitores e indutores podem ser tratados por suas **impedâncias**:
+
+$$
+Z_R = R,
+\qquad
+Z_C = \frac{1}{j\omega C},
+\qquad
+Z_L = j\omega L.
+$$
+
+Em vez de resolver equações diferenciais diretamente no tempo, resolve-se um sistema algébrico complexo no domínio da frequência. Isso é muito útil para estudar resposta em frequência, filtros e ganho.
+
+### Análise transitória
+
+Na análise **transitória**, o objetivo é acompanhar a evolução temporal das tensões e correntes quando as fontes variam no tempo.
+
+Aqui, a formulação diferencial-algébrica completa precisa ser preservada:
+
+$$
+\mathbf{M}\frac{d\mathbf{x}}{dt} + \mathbf{K}\mathbf{x} = \mathbf{f}(t).
+$$
+
+Além disso, são necessárias **condições iniciais consistentes**, por exemplo:
+
+$$
+\mathbf{e}(0) = \mathbf{e}_0,
+\qquad
+\mathbf{i}_L(0) = \mathbf{i}_{L,0}.
+$$
+
+Esse é o regime mais geral e o mais próximo do comportamento real de um simulador SPICE.
+
+## Circuitos não lineares
+
+Os materiais complementares também deixam claro que a ideia da MNA pode ser estendida para circuitos não lineares.
+
+Nesse caso, as relações constitutivas deixam de ser lineares e o sistema passa a depender do próprio vetor de incógnitas. Conceitualmente, a estrutura continua a mesma:
+
+- montar as equações a partir da topologia;
+- incluir as relações de cada elemento;
+- linearizar iterativamente quando necessário.
+
+Esse ponto é importante porque simuladores SPICE reais trabalham justamente com elementos não lineares, como diodos e transistores.
+
+## Aplicação em SPICE
+
+Em um simulador SPICE, o circuito não é resolvido como um desenho, mas como um conjunto de equações montadas a partir dos elementos.
+
+O fluxo conceitual é:
+
+1. ler a descrição do circuito;
+2. identificar nós e componentes;
+3. adicionar a contribuição de cada elemento à matriz global;
+4. resolver o sistema resultante.
+
+Essa contribuição local de cada elemento para a matriz global é o que normalmente se chama de **stamping**.
+
+Por isso, entender MNA primeiro é essencial: o stamping nada mais é do que a implementação sistemática da formulação matricial.
+
+Outro ponto prático importante é que a MNA permite construir a matriz **elemento por elemento**, usando regras locais. Isso combina bem com a leitura de uma netlist e com a arquitetura tradicional de simuladores.
+
+## Exemplo resolvido
+
+Considere um circuito simples com:
+
+- uma fonte de corrente $I$ injetando corrente em um nó;
+- um resistor $R$ ligando esse nó ao terra.
+
+Se a tensão do nó for $v$, então a corrente no resistor é:
+
+$$
+\frac{v}{R}.
+$$
+
+Aplicando KCL no nó:
+
+$$
+\frac{v}{R} - I = 0.
+$$
+
+Logo,
+
+$$
+v = RI.
+$$
+
+Mesmo esse caso simples já ilustra a lógica da MNA:
+
+- escolher variáveis nodais;
+- escrever as contribuições dos elementos;
+- montar e resolver um sistema linear.
+
+## Observação prática
+
+Uma consequência importante da MNA é que nem toda corrente aparece diretamente como incógnita principal.
+
+Por exemplo, a corrente em um resistor normalmente é recuperada depois, a partir das tensões nodais. Uma técnica clássica para expor explicitamente essa corrente é inserir uma **fonte de tensão de 0 V** em série com o ramo. Como a corrente na fonte passa a ser uma incógnita da MNA, ela funciona como um "amperímetro ideal" sem alterar o circuito idealizado.
+
+## Possível implementação
+
+Em uma implementação futura, cada tipo de elemento poderá contribuir com blocos específicos para a matriz global e para o vetor do lado direito.
+
+Os próximos tópicos naturais são:
+
+- stamping de resistor;
+- stamping de fontes independentes;
+- extensão para elementos dinâmicos;
+- tratamento numérico do sistema linear.
+
+## Referências
+
+- Hanke, Michael. *An Introduction to the Modified Nodal Analysis*. August 20, 2008.
+- Ho, Chung-Wen, Albert E. Ruehli, and Pierce A. Brennan. "The Modified Nodal Approach to Network Analysis." *IEEE Transactions on Circuits and Systems* 22, no. 6 (June 1975): 504-509.
+- Rayas-Sánchez, José Ernesto. *The Modified Nodal Analysis (MNA) Method*. February 5, 2020.
